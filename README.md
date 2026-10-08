@@ -2,7 +2,10 @@
 
 本仓库用于整理课程《大数据分析及数据可视化》的实验内容，并将教材中通过 Excel、Power BI 或 Python Notebook 完成的案例迁移为可重复运行的 Python 实验代码。
 
-当前已完成内容为：《Excel数据可视化——从图表到数据大屏》第二章图表案例的 Python 复现。
+当前已完成内容：
+
+- 《Excel数据可视化——从图表到数据大屏》第二章图表案例的 Python 复现。
+- 《商业数据分析》教材中典型 Excel / Power BI / SQL 分析场景的 Python 实验迁移。
 
 ## 实验目标
 
@@ -17,9 +20,13 @@
 ├── README.md
 ├── requirements.txt
 ├── reproduce_chapter2_charts.py
+├── run_business_data_analysis.py
+├── business_data_analysis/
+├── business_data_analysis_outputs/
 ├── chapter2_python_charts/
 ├── docs/
-│   └── experiment_catalog.md
+│   ├── experiment_catalog.md
+│   └── business_data_analysis_migration.md
 ├── 第二章 图表(前15).xlsx
 ├── 第二章 图表(后15).xlsx
 └── 《Excel数据可视化——从图表到数据大屏》.pptx
@@ -30,6 +37,7 @@
 | 实验 | 来源教材 | 原始实现 | Python 迁移结果 |
 | --- | --- | --- | --- |
 | 第二章 30 个图表案例 | 《Excel数据可视化——从图表到数据大屏》 | Excel 图表 | `reproduce_chapter2_charts.py` |
+| RFM、漏斗、同期群、描述统计、用户画像、时间序列 | 《商业数据分析》 | Excel / Power BI / SQL 分析场景 | `business_data_analysis/` |
 
 输出图片位于：
 
@@ -49,6 +57,12 @@ pip install -r requirements.txt
 
 ```powershell
 python reproduce_chapter2_charts.py
+```
+
+运行《商业数据分析》全部实验：
+
+```powershell
+python run_business_data_analysis.py
 ```
 
 脚本会读取当前目录下的两个 Excel 工作簿：
@@ -71,8 +85,6 @@ python reproduce_chapter2_charts.py
 
 以下内容需要在提供对应教材资料后继续迁移：
 
-- 《商业数据分析》中 Excel 案例的 Python 实验。
-- 《商业数据分析》中 Power BI 案例的 Python 实验。
 - 《商业数据分析》中 `.ipynb` 文件整理为 `.py` 文件。
 - 《Excel数据可视化——从图表到数据大屏》后续章节案例。
 
@@ -81,4 +93,3 @@ python reproduce_chapter2_charts.py
 当前 GitHub 仓库：
 
 https://github.com/fengjunda888/data-analysis-visualization-course
-
